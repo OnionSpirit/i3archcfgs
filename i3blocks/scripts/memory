@@ -51,10 +51,10 @@ END {
 		pct=used/total*100
 	}
 	# full text
-	printf("<span background=\"#88c0d0\"><span size=\"small\" rise=\"2pt\">%.f%%</span>  </span><span background=\"#88c0d0\" foreground=\"#2e3440\" size=\"x-large\"></span>\n", pct)
+	printf("<span background=\"#88c0d0\"><span size=\"small\" rise=\"2pt\">%.f%%</span>  </span><span background=\"#88c0d0\" foreground=\"#000000\" size=\"x-large\"></span>\n", pct)
 
 	# short text
-	printf("<span background=\"#88c0d0\"><span size=\"small\" rise=\"2pt\">%.f%%</span>  </span><span background=\"#88c0d0\" foreground=\"#2e3440\" size=\"x-large\"></span>\n", pct)
+	printf("<span background=\"#88c0d0\"><span size=\"small\" rise=\"2pt\">%.f%%</span>  </span><span background=\"#88c0d0\" foreground=\"#000000\" size=\"x-large\"></span>\n", pct)
 	# color
 	if (pct > 90) {
 		print("#BF616A")
