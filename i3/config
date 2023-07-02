@@ -32,6 +32,7 @@ smart_borders on
 set $bg feh --bg-center /home/onionspirit/Pictures/404.jpg
 exec $bg
 
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -229,3 +230,7 @@ bindsym $mod+m exec $monitors && $bg
 #laptop monitors setup
 set $laptop_monitors xrandr --output eDP-1 --auto --pos 0x0 --output HDMI-1 --auto --pos 1920x0
 bindsym $mod+n exec $laptop_monitors && $bg
+
+#git auth
+#set $git_auth eval "$(ssh-agent -s)" && ssh-add ~/.ssh/git_ke
+#bindsym $mod+c exec $git_auth
