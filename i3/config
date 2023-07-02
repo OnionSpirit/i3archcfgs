@@ -29,7 +29,8 @@ smart_borders on
     client.unfocused        #092047 #092047 #b7c1de #29132e
 
 #update wallpaper
-set $bg feh --bg-center /home/onionspirit/Pictures/404.jpg
+set $screen_bg  ~/.config/wallpapers/404.jpg
+set $bg feh --bg-center $screen_bg
 exec $bg
 
 exec compton -b
@@ -229,17 +230,19 @@ bindsym $mod+z exec emacs
 
 #home monitor setup
 set $monitors xrandr --output HDMI-1 --mode 3440x1440 --pos 0x0 --output eDP-1 --off
-bindsym $mod+m exec $monitors && $bg
-
+bindsym $mod+m exec --no-startup-id $monitors && $bg
 
 #laptop monitors setup
 set $laptop_monitors xrandr --output eDP-1 --auto --pos 0x0 --output HDMI-1 --auto --pos 1920x0
-bindsym $mod+n exec $laptop_monitors && $bg
+bindsym $mod+n exec --no-startup-id $laptop_monitors && $bg
 
 #git auth
 # set $git_auth eval "$(ssh-agent -s)" && ssh-add ~/.ssh/git_key
 # bindsym $mod+c exec $term $git_auth
 
+exec --no-startup-id eval "$(ssh-agent -s)" && ssh-add ~/.ssh/git_key
+
 #Lockscreen
-bindsym $mod+l exec i3lock
+set $lockscreen_bg ~/.config/wallpapers/gun.png
+bindsym $mod+l exec --no-startup-id i3lock -i $lockscreen_bg && sleep 15 && xset dpms force off
 exec "xautolock -detectsleep -time 3 -locker \"i3lock -c 000000\""
