@@ -1,1 +1,1 @@
-sudo pacman -S rofi alacritty emacs neofetch discord telegram-desktop xorg-xrandr feh i3blocks picom
+sudo pacman -S rofi alacritty emacs neofetch discord telegram-desktop xorg-xrandr feh i3blocks picom cmake ninja gcc wireguard-tools openresolv

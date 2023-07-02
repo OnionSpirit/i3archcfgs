@@ -238,4 +238,8 @@ bindsym $mod+n exec $laptop_monitors && $bg
 
 #git auth
 # set $git_auth eval "$(ssh-agent -s)" && ssh-add ~/.ssh/git_key
-# bindsym $mod+c exec $git_auth
+# bindsym $mod+c exec $term $git_auth
+
+#Lockscreen
+bindsym $mod+l exec i3lock
+exec "xautolock -detectsleep -time 3 -locker \"i3lock -c 000000\""
