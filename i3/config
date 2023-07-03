@@ -240,7 +240,7 @@ bindsym $mod+n exec --no-startup-id $laptop_monitors && $bg
 # set $git_auth eval "$(ssh-agent -s)" && ssh-add ~/.ssh/git_key
 # bindsym $mod+c exec $term $git_auth
 
-exec --no-startup-id eval "$(ssh-agent -s)" && ssh-add ~/.ssh/git_key
+exec ssh-add ~/.ssh/git_key
 
 #Lockscreen
 set $lockscreen_bg ~/.config/wallpapers/gun.png
