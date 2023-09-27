@@ -226,7 +226,7 @@ bindsym $mod+c exec code
 
 #update wallpaper
 set $screen_bg  ~/.config/wallpapers/landscape.jpg
-set $bg feh --bg-center ~/.config/wallpapers/city_neon.jpg
+set $bg feh --bg-center ~/.config/wallpapers/landscape.jpg
 exec $bg
 exec compton -b
 
