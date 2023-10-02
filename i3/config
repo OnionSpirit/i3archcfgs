@@ -24,9 +24,10 @@ smart_borders on
     for_window [tiling] border pixel 7
 
     # class
-    client.focused        #393f5f #393f5f #29132e #0b468c
-    client.focused_inactive    #092047 #092047 #b7c1de #092047
-    client.unfocused        #092047 #092047 #b7c1de #29132e
+    client.unfocused        #393f5f #393f5f #29132e #0b468c
+    client.focused_inactive        #393f5f #393f5f #b7c1de #092047
+    # client.focused_inactive #092047 #092047 #b7c1de #092047
+    client.focused        #092047 #092047 #b7c1de #29132e
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
