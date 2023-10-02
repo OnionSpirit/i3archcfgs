@@ -237,7 +237,7 @@ exec compton -b
 
 
 #home monitors setup
-set $monitors xrandr --output HDMI-1 --mode 3440x1440 --pos 0x0 --output eDP-1 --auto --pos 3440x0
+set $monitors xrandr --output HDMI-1 --mode 3440x1440 --pos 0x0 --output eDP-1 --auto --pos 3440x180
 bindsym $mod+m exec $monitors && $bg
 
 
