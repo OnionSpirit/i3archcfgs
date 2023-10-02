@@ -171,8 +171,8 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # move workspaces between monitors
-bindsym $mod+Control+1 move workspace to output HDMI-1
-bindsym $mod+Control+2 move workspace to output eDP-1
+bindsym $mod+F1 move workspace to output HDMI-1
+bindsym $mod+F2 move workspace to output eDP-1
 
 
 # reload the configuration file
@@ -236,7 +236,7 @@ exec $bg
 exec compton -b
 
 
-#home monitor setup
+#home monitors setup
 set $monitors xrandr --output HDMI-1 --mode 3440x1440 --pos 0x0 --output eDP-1 --auto --pos 3440x0
 bindsym $mod+m exec $monitors && $bg
 
@@ -253,5 +253,5 @@ bindsym $mod+n exec $laptop_monitors && $bg
 
 #Lockscreen
 set $lockscreen_bg ~/.config/wallpapers/city_neon.png
-bindsym $mod+l exec --no-startup-id i3lock -i $lockscreen_bg && sleep 15 && xset dpms force off &&  xautolock -detectsleep -time 3 -locker \"i3lock -i $lockscreen_bg\"
-exec xautolock -detectsleep -time 3 -locker \"i3lock -i $lockscreen_bg"
+bindsym $mod+l exec --no-startup-id i3lock -t -i $lockscreen_bg && sleep 15 && xset dpms force off &&  xautolock -detectsleep -time 3 -locker \"i3lock -t -i $lockscreen_bg\"
+exec xautolock -detectsleep -time 3 -locker \"i3lock -i -t $lockscreen_bg"
